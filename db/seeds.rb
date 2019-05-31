@@ -55,9 +55,7 @@ rental1 = Rental.new({
 
     rental2.save()
 
-rental2.rental_date = "02/04/19"
-rental2.update_rental
-
+total_price = Stock.total_stock_price
 
 
 
