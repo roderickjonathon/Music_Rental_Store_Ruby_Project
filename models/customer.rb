@@ -45,5 +45,17 @@ attr_accessor :id, :name, :phone, :address
     SqlRunner.run(sql, values)
   end
 
+  def stock_rented()
+    sql = "SELECT stocklist.* FROM stocklist
+    INNER JOIN rentals
+    ON rentals.stock_id = stocklist.id
+    WHERE customer_id = $1"
+    values = [@id]
+    stock_items = SqlRunner.run(sql, values)
+    result = stock_items.map { |stock| Stock.new(stock) }
+    return result
+
+  end
+
 
 end

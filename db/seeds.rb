@@ -12,52 +12,83 @@ customer1 = Customer.new({
   "phone" => "01414295555",
   "address" => "42 Evergreen Terrace"
   })
- customer1.save()
- customer2 = Customer.new({
-   "name" => "Sally Sitar",
-   "phone" => "01414296666",
-   "address" => "66 Hells Highway"
-   })
-customer2.save()
-
-stock_item1 = Stock.new({
-  "item_name" => "Guitar",
-  "item_category" => "String Instruments",
-  "price" => 60,
-  "quantity" => 4
-  })
-stock_item1.save()
-stock_item2 = Stock.new({
-  "item_name" => "Technics Turntable",
-  "item_category" => "DJ Equipment",
-  "price" => 35,
-  "quantity" => 6
-  })
-stock_item2.save()
-
-rental1 = Rental.new({
-  "rental_name" => "Guitar Hire",
-  "price" => stock_item1.price,
-  "rental_date" => "21/3/19",
-  "customer_id" => customer1.id,
-  "stock_id" => stock_item1.id
-  })
-
-  rental1.save()
-
-  rental2 = Rental.new({
-    "rental_name" => "Turntable Hire",
-    "price" => stock_item2.price,
-    "rental_date" => "02/03/19",
-    "customer_id" => customer2.id,
-    "stock_id" => stock_item2.id
+  customer1.save()
+  customer2 = Customer.new({
+    "name" => "Sally Sitar",
+    "phone" => "01414296666",
+    "address" => "66 Hells Highway"
     })
-
-    rental2.save()
-
-total_price = Stock.total_stock_price
+    customer2.save()
 
 
 
-binding.pry
-nil
+    stock_item1 = Stock.new({
+      "item_name" => "Guitar",
+      "item_category" => "String Instruments",
+      "price" => 60,
+      "quantity" => 4
+      })
+      stock_item1.save()
+      stock_item2 = Stock.new({
+        "item_name" => "Technics Turntable",
+        "item_category" => "DJ Equipment",
+        "price" => 35,
+        "quantity" => 6
+        })
+        stock_item2.save()
+        stock_item3 = Stock.new({
+          "item_name" => "DJ Mixer",
+          "item_category" => "DJ Equipment",
+          "price" => 60,
+          "quantity" => 2
+          })
+          stock_item3.save()
+
+dj_equipment_set = [stock_item2.item_name, stock_item3.item_name]
+dj_equipment_set_price = [stock_item2.price, stock_item3.price]
+
+
+
+          rental1 = Rental.new({
+            "rental_name" => "Guitar Hire",
+            "rental_items" => stock_item1.item_name,
+            "price" => stock_item1.price,
+            "rental_date" => "21/3/19",
+            "customer_id" => customer1.id,
+            "stock_id" => stock_item1.id
+            })
+
+            rental1.save()
+
+            rental2 = Rental.new({
+              "rental_name" => "Turntable Hire",
+              "rental_items" => stock_item2.item_name,
+              "price" => stock_item2.price,
+              "rental_date" => "02/03/19",
+              "customer_id" => customer2.id,
+              "stock_id" => stock_item2.id
+              })
+
+              rental2.save()
+
+              # rental_set = Rental.new({
+              #   "rental_name" => "Full DJ Setup Hire",
+              #   "rental_items" => dj_equipment_set,
+              #   "price" => dj_equipment_set_price.sum,
+              #   "rental_date" => "02/03/19",
+              #   "customer_id" => customer2.id,
+              #   "stock_id" =>
+              #   })
+
+                # rental_set.save()
+
+              total_price = Stock.total_stock_price
+
+all_customers = Customer.all
+
+
+
+
+
+                binding.pry
+                nil

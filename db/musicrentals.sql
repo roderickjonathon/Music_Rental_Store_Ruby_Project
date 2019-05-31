@@ -23,6 +23,7 @@ CREATE TABLE rentals
 (
   id SERIAL8 PRIMARY KEY,
   rental_name VARCHAR(255),
+  rental_items VARCHAR(255),
   price INT4,
   rental_date VARCHAR(255),
   customer_id INT4 references customers(id) ON DELETE CASCADE,

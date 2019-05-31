@@ -56,6 +56,29 @@ class Stock
   end
 
 
+  def customers_renting
+    sql = "SELECT customers.* FROM customers
+    INNER JOIN rentals
+    ON rentals.customer_id = customers.id
+    WHERE stock_id = $1"
+    values = [@id]
+    customers = SqlRunner.run(sql, values)
+    result = customers.map { |customer| Customer.new(customer) }
+    return result
+  end
+
+
+  def stock_available
+    
+
+  end
+
+
+
+
+
+
+
 
 
 end
