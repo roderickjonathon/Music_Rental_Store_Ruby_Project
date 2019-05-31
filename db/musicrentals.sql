@@ -22,9 +22,9 @@ CREATE TABLE stocklist
 CREATE TABLE rentals
 (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
+  rental_name VARCHAR(255),
   price INT4,
   rental_date VARCHAR(255),
-  customer_id INT4 references customers(id),
-  stock_id INT4 references stocklist(id)
-)
+  customer_id INT4 references customers(id) ON DELETE CASCADE,
+  stock_id INT4 references stocklist(id) ON DELETE CASCADE
+);
