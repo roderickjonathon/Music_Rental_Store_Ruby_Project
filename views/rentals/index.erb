@@ -1,10 +1,14 @@
-<h1>All Rental Information</h1>
+<div class="container">
 
+
+<!--
 <form action="/rentals/new" method="get">
   <input class="btn" type="submit" value="Add New Rental" />
-</form>
+</form> -->
 
 <% for rental in @rentals %>
+<div class="box">
+
 <p>ID: <%=rental.id%></p>
 <p>Reference: <%=rental.rental_reference%> </p>
 <p>Rental Items: <%=rental.rental_items%></p>
@@ -20,7 +24,8 @@
 <form action="/rentals/<%=rental.id%>/update" method="get">
   <input class="btn" type="submit" value="update" />
 </form>
-<hr/>
 
+</div>
 
 <% end %>
+</div>

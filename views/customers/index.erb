@@ -1,9 +1,10 @@
-<h1>Customer info goes here!</h1>
+<div class="container">
 
-<form action="/customers/new" method="get">
+<!-- <form action="/customers/new" method="get">
   <input class="btn" type="submit" value="Add New Customer" />
-</form>
+</form> -->
 <% for customer in @customers %>
+<div class="box">
 <p>ID: <%=customer.id%></p>
 <p>Name: <%=customer.name%> </p>
 <p>Phone: <%=customer.phone%></p>
@@ -15,5 +16,6 @@
   <input class="btn" type="submit" value="update" />
 </form>
 
-
+</div>
 <% end %>
+</div>
