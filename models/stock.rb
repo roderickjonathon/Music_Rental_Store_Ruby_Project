@@ -57,6 +57,14 @@ class Stock
     return result.first['total_stock_price'].to_i
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM stocklist WHERE id = $1"
+    values = [id]
+    stock = SqlRunner.run( sql, values )
+    result = Stock.new( stock.first )
+    return result
+  end
+
 
   def customers_renting
     sql = "SELECT customers.* FROM customers

@@ -1,0 +1,11 @@
+<form method="post" action="/customers/<%=@customer.id%>/update">
+<label for="name">Name</label>
+<input id="name" type="text" name="name" value="<%=@customer.name%>"/>
+<label for="phone"></label>
+<input id="phone" type="text" name="phone" value="<%= @customer.phone %>" />
+<label for="address">Address:</label>
+<input type="text" id="address" name="address" value="<%=@customer.address%>" />
+
+<input class = "btn" type="submit" value="Update Customer"/>
+
+</form>

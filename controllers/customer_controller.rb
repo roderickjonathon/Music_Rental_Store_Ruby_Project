@@ -16,14 +16,32 @@ get '/customers/new' do
   erb( :"customers/new" )
 end
 
+get "/customers/:id/" do
+  @customer = Customer.find(params[:id])
+  erb(:"customers/index")
+end
+
+get "/customers/:id/update" do
+  @customer = Customer.find(params[:id])
+  erb(:"customers/customer_update")
+end
+
+post "/customers/:id/update" do
+  @customer = Customer.new(params)
+  @customer.update_customer()
+  redirect to ("/customers")
+end
+
+
+
 post '/customers/' do
   customer = Customer.new(params)
   customer.save_customer
   redirect to ("/customers")
 end
 
-
 post '/customers/:id/delete' do
-  Customer.delete_customer(params[:id])
+  @customer = Customer.find(params[:id])
+  @customer.delete_customer()
   redirect to ("/customers")
 end

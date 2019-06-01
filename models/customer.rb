@@ -57,5 +57,13 @@ attr_accessor :id, :name, :phone, :address
 
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM customers WHERE id = $1"
+    values = [id]
+    customer = SqlRunner.run( sql, values )
+    result = Customer.new( customer.first )
+    return result
+  end
+
 
 end

@@ -10,3 +10,15 @@ get '/stock' do
   @stock = Stock.new
   erb(:"stock/index")
 end
+
+
+get '/stock/new' do
+  @stock = Stock.all_stock
+  erb(:"stock/new")
+end
+
+
+get "/stock/:id/" do
+  @stock = Stock.find(params[:id])
+  erb (:"stock/index")
+end
