@@ -1,12 +1,10 @@
+
+
 <form action="/rentals/" method="post">
 
 
   <label for="rental_reference">Rental Reference:</label>
-  <select name="rental_reference" id="rental_reference">
-    <% @rentals.each do |rental| %>
-        <option value=<%= rental.rental_reference %>><%= rental.reference_gen %></option>
-    <% end %>
-  </select>
+  <input name="rental_reference" id="rental_reference" value=<%= @rental.reference_gen%>>
 
   <label for="rental_items">Item Rented:</label>
   <select name="rental_items" id="rental_items">
@@ -16,7 +14,7 @@
   </select>
 
   <label for="price">Price:</label>
-  <input id="price" type="text" name="price"/>
+  <input id="price" type="text" name="price" value=<%= @stockitem.price %>>
 
   <label for="rental_date">Date Rented:</label>
   <input id="rental_date" type="text" name="rental_date" />
@@ -28,12 +26,8 @@
       <% end %>
     </select>
 
-  <label for="stock_id">Stock Reference:</label>
-    <select name="stock_id" id="stock_id">
-      <% @stock.each do |stock| %>
-          <option value=<%= stock.id %>><%= stock.id %></option>
-      <% end %>
-    </select>
+ <label for="stock_id">Stock Reference:</label>
+    <input id="stock_id" type="text" name="stock_id" value=<%= @rental.stock_id %>>
 
 
   <input type="submit" value="Add Rental">

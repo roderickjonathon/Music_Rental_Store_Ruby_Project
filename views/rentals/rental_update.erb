@@ -1,0 +1,32 @@
+<form method="post" action="/stock/<%=@rental.id%>/update">
+
+
+<label for="rental_reference">Rental Reference:</label>
+<input id="rental_reference" type="text" name="rental_reference" value="<%= @rental.rental_reference %>"/>
+
+<label for="rental_items">Item Rented:</label>
+<select name="rental_items" id="rental_items">
+  <% @stock.each do |stock| %>
+      <option><%= stock.item_name %></option>
+  <% end %>
+</select>
+
+<label for="rental_price">Price:</label>
+<input id="rental_price" type="text" name="rental_price" value="<%= @rental.rental_price %>" />
+
+<label for="rental_date">Rental Date:</label>
+<input type="text" id="rental_date" name="rental_date" value="<%= @rental.rental_date %>" />
+
+<label for="customer_id">Customer:</label>
+<select name="customer_id" id="customer_id">
+  <% @customer.each do |customer| %>
+      <option value=<%= customer.id %>><%= customer.name %></option>
+  <% end %>
+</select>
+
+<label for="stock_id">Stock ID:</label>
+<input type="text" id="stock_id" name="stock_id" value="<%= @rental.stock_id %>" />
+
+<input class = "btn" type="submit" value="Update Stock Item" />
+
+</form>
