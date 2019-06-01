@@ -6,11 +6,21 @@
 
 <% for rental in @rentals %>
 <p>ID: <%=rental.id%></p>
-<p>Rental Name: <%=rental.rental_name%> </p>
+<p>Reference: <%=rental.rental_reference%> </p>
 <p>Rental Items: <%=rental.rental_items%></p>
-<p>Price: <%=rental.price%></p>
+<p>Price: <%=rental.rental_price%></p>
 <p>Rental Date: <%= rental.rental_date %></p>
-<p>Customer ID: <%=rental.customer_id %></p>
+<p>Customer ID: <%= rental.customer_id %></p>
 <p>Stock ID: <%= rental.stock_id%></p>
+
+
+<form action="/rentals/<%=rental.id%>/delete" method="POST">
+  <input class="btn" type="submit" value="delete" />
+</form>
+<form action="/rentals/<%=rental.id%>/update" method="get">
+  <input class="btn" type="submit" value="update" />
+</form>
 <hr/>
+
+
 <% end %>

@@ -8,6 +8,7 @@ also_reload('../models/*')
 
 
 get '/rentals' do
+  @rental = Rental.new(params)
   @rentals = Rental.all_rentals()
   @customer = Customer.all_customers()
   @stock = Stock.all_stock()
@@ -18,6 +19,7 @@ get '/rentals/new' do
   @rentals = Rental.all_rentals
   @customer = Customer.all_customers()
   @stock = Stock.all_stock()
+
   erb( :"rentals/new" )
 end
 
@@ -40,13 +42,13 @@ end
 
 
 post '/rentals/' do
-  rental = rental.new(params)
+  rental = Rental.new(params)
   rental.save_rental
   redirect to ("/rentals")
 end
 
 post '/rentals/:id/delete' do
-  @rental = rental.find(params[:id])
+  @rental = Rental.find(params[:id])
   @rental.delete_rental()
   redirect to ("/rentals")
 end

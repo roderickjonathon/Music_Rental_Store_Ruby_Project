@@ -50,9 +50,9 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
 
 
           rental1 = Rental.new({
-            "rental_name" => "Guitar Hire",
+            "rental_reference" => "REN25677",
             "rental_items" => stock_item1.item_name,
-            "price" => stock_item1.price,
+            "rental_price" => stock_item1.price,
             "rental_date" => "21/3/19",
             "customer_id" => customer1.id,
             "stock_id" => stock_item1.id
@@ -61,9 +61,9 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
             rental1.save_rental()
 
             rental2 = Rental.new({
-              "rental_name" => "Turntable Hire",
+              "rental_reference" => "REN13455",
               "rental_items" => stock_item2.item_name,
-              "price" => stock_item2.price,
+              "rental_price" => stock_item2.price,
               "rental_date" => "02/03/19",
               "customer_id" => customer2.id,
               "stock_id" => stock_item2.id
@@ -71,16 +71,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
 
               rental2.save_rental()
 
-              # rental_set = Rental.new({
-              #   "rental_name" => "Full DJ Setup Hire",
-              #   "rental_items" => dj_equipment_set,
-              #   "price" => dj_equipment_set_price.sum,
-              #   "rental_date" => "02/03/19",
-              #   "customer_id" => customer2.id,
-              #   "stock_id" =>
-              #   })
 
-                # rental_set.save()
 
               total_price = Stock.total_stock_price
 
