@@ -8,6 +8,7 @@ body {
   background-attachment: fixed;
   font-family: sans-serif;
   font; white;
+  
 }
 
 
@@ -27,12 +28,10 @@ form {
   width: 70%;
   height: 10%;
   font-size: 2vw;
-  border: solid;
-  border-width: thick;
-  border-radius: 25px;
+
   display: flex;
   flex-flow: row wrap;
-  flex: 10;
+
   margin: 15px 0;
 
 }
@@ -41,11 +40,26 @@ input[type=text] {
   padding: 12px 20px;
   margin: 30px 0;
   box-sizing: border-box;
-
+  font-size: 100%;
   opacity: 0.6;
   border: 3px solid #1be;
   border-radius: 25px;
   display: flex;
+
+}
+
+.btn {
+  border-top:		5px solid #1be;
+  border-left:		5px solid #1be;
+  border-right:		5px solid #1be;
+  border-bottom:		5px solid #1be;
+  border-radius: 25px;
+  padding:		1px 8px !important;
+  font-size:		75%; !important;
+  background-color:	#1be0;
+  font-weight:		bold;
+  color: white;
+  margin: 25px;
 
 }
 
@@ -57,10 +71,10 @@ input[type=text] {
   border-bottom:		2px solid #4f6267;
   border-radius: 25px;
   padding:		10px 20px !important;
-  font-size:		14px !important;
+  font-size:		75%; !important;
   background-color:	#1be;
   font-weight:		bold;
-  color:			#white;
+  color: white;
   margin: 25px;
 }
 
@@ -70,30 +84,47 @@ label {
 
 .container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   width: 90vw;
   margin: 0 auto;
   justify-content: center;
   align-content: center;
   color: white;
   font-weight: bold;
+  padding: 40px;
+
+}
+
+.select {
+  float: left;
+  font-size: 16px;
+  color: #1be;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  opacity: 0.2;
 
 }
 
 .box {
-  flex: 1;
-  border: solid 5px;
+  display: flex;
+  flex-flow: column wrap;
+  /* flex: 1; */
+  border: solid 15px;
   border-color: #1be;
   border-radius: 15px;
   height: 25vh;
   width: 25vw;
-  margin: 20px;
+  margin: 80px;
   padding: 20px;
   font: white;
+  font-size: 120%;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
 }
 .navbar {
   overflow: hidden;
   background-color: #333;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
 }
 
 .navbar a {
@@ -104,6 +135,8 @@ label {
   padding: 14px 16px;
   text-decoration: none;
   opacity: 0.2;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+
 }
 
 .dropdown {
@@ -123,11 +156,12 @@ label {
   background-color: inherit;
   font-family: inherit;
   margin: 50px;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
 
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #1be;
+  /* background-color: #1be; */
   opacity: 0.2;
   border: solid;
   border-radius: 25px;
@@ -136,13 +170,13 @@ label {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #1be;
+  background-color: #1be0;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  border: solid;
+  /* border: solid; */
   border-radius: 25px;
-  border-color: #09CEE8
+  border-color: white;
 
 
 

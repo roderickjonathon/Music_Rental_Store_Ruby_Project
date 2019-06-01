@@ -18,11 +18,12 @@
 <p>Quantity: <%=stock.quantity%></p>
 
 
+
 <form action="/stock/<%= stock.id %>/delete" method="POST">
-  <input class="btn" type="submit" value="delete" />
+  <input class="btn" type="submit" value="Delete" />
 </form>
 <form action="/stock/<%= stock.id %>/update" method="get">
-  <input class="btn" type="submit" value="update" />
+  <input class="btn" type="submit" value="Update" />
 </form>
 </div>
 

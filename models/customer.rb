@@ -54,7 +54,6 @@ attr_accessor :id, :name, :phone, :address
     stock_items = SqlRunner.run(sql, values)
     result = stock_items.map { |stock| Stock.new(stock) }
     return result
-
   end
 
   def self.find( id )

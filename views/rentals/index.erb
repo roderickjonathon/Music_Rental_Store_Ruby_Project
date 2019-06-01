@@ -15,14 +15,14 @@
 <p>Price: <%=rental.rental_price%></p>
 <p>Rental Date: <%= rental.rental_date %></p>
 <p>Customer: <%= rental.customer_id %></p>
-<p>Stock ID: <%= rental.stock_id%></p>
+<!-- <p>Stock ID: <%= rental.stock_id%></p> -->
 
 
 <form action="/rentals/<%=rental.id%>/delete" method="POST">
-  <input class="btn" type="submit" value="delete" />
+  <input class="btn" type="submit" value="Delete" />
 </form>
 <form action="/rentals/<%=rental.id%>/update" method="get">
-  <input class="btn" type="submit" value="update" />
+  <input class="btn" type="submit" value="Update" />
 </form>
 
 </div>
