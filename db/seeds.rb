@@ -12,13 +12,13 @@ customer1 = Customer.new({
   "phone" => "01414295555",
   "address" => "42 Evergreen Terrace"
   })
-  customer1.save()
+  customer1.save_customer()
   customer2 = Customer.new({
     "name" => "Sally Sitar",
     "phone" => "01414296666",
     "address" => "66 Hells Highway"
     })
-    customer2.save()
+    customer2.save_customer()
 
 
 
@@ -28,21 +28,21 @@ customer1 = Customer.new({
       "price" => 60,
       "quantity" => 4
       })
-      stock_item1.save()
+      stock_item1.save_stock()
       stock_item2 = Stock.new({
         "item_name" => "Technics Turntable",
         "item_category" => "DJ Equipment",
         "price" => 35,
         "quantity" => 6
         })
-        stock_item2.save()
+        stock_item2.save_stock()
         stock_item3 = Stock.new({
           "item_name" => "DJ Mixer",
           "item_category" => "DJ Equipment",
           "price" => 60,
           "quantity" => 2
           })
-          stock_item3.save()
+          stock_item3.save_stock()
 
 dj_equipment_set = [stock_item2.item_name, stock_item3.item_name]
 dj_equipment_set_price = [stock_item2.price, stock_item3.price]
@@ -58,7 +58,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
             "stock_id" => stock_item1.id
             })
 
-            rental1.save()
+            rental1.save_rental()
 
             rental2 = Rental.new({
               "rental_name" => "Turntable Hire",
@@ -69,7 +69,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
               "stock_id" => stock_item2.id
               })
 
-              rental2.save()
+              rental2.save_rental()
 
               # rental_set = Rental.new({
               #   "rental_name" => "Full DJ Setup Hire",
@@ -84,7 +84,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
 
               total_price = Stock.total_stock_price
 
-all_customers = Customer.all
+all_customers = Customer.all_customers
 
 
 

@@ -1,5 +1,7 @@
 require('pg')
 require_relative('../db/sql_runner.rb')
+require_relative('./rental.rb')
+require_relative('./customer.rb')
 
 
 class Stock
@@ -16,7 +18,7 @@ class Stock
   end
 
 
-  def save()
+  def save_stock()
     sql = "INSERT INTO stocklist (item_name, item_category, price, quantity ) VALUES ($1, $2, $3, $4) RETURNING id"
     values = [@item_name, @item_category, @price, @quantity]
     stock_item = SqlRunner.run(sql, values).first
@@ -24,7 +26,7 @@ class Stock
   end
 
 
-  def self.all()
+  def self.all_stock()
     sql = "SELECT * FROM stocklist"
     stocklist = SqlRunner.run(sql)
     result = stocklist.map { |stock| Stock.new(stock) }
@@ -68,10 +70,22 @@ class Stock
   end
 
 
-  def stock_available
-    
+  def is_available?
+    if self.quantity > 0
+      return true
+    end
 
   end
+
+  # def rent_out(item)
+  #   if item.is_available == true
+  #     item.quantity - 1
+  #   end
+  # end
+
+
+
+
 
 
 

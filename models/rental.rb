@@ -1,5 +1,8 @@
 require('pg')
 require_relative('../db/sql_runner.rb')
+require_relative('./stock.rb')
+require_relative('./customer.rb')
+
 
 
 
@@ -18,14 +21,14 @@ class Rental
 
   end
 
-  def save()
+  def save_rental()
     sql = "INSERT into rentals (rental_name, rental_items, price, rental_date, customer_id, stock_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
     values = [@rental_name, @rental_items, @price, @rental_date, @customer_id, @stock_id]
     rental = SqlRunner.run(sql, values).first
     @id = rental['id'].to_i
   end
 
-  def self.all()
+  def self.all_rentals()
     sql = "SELECT * FROM rentals"
     rentals = SqlRunner.run(sql)
     result = rentals.map { |rental| Rental.new(rental)  }
@@ -43,6 +46,14 @@ class Rental
     values = [@rental_name, @rental_items, @price, @rental_date, @customer_id, @stock_id, @id]
     SqlRunner.run(sql, values)
   end
+
+
+## THIS FUNCTION SHOULD CHECK IF STOCK IS THERE, REDUCE STOCK ITEM COUNT, THEN ADD THE ITEM TO RENTALS TABLE
+
+
+
+
+
 
 
 

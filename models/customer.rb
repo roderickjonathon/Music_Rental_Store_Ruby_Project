@@ -13,14 +13,14 @@ attr_accessor :id, :name, :phone, :address
     end
 
 
-  def save()
+  def save_customer()
     sql = "INSERT INTO customers (name, phone, address) VALUES ($1, $2, $3) RETURNING id"
     values = [@name, @phone, @address]
     customer = SqlRunner.run(sql, values).first
     @id = customer['id'].to_i
   end
 
-  def self.all()
+  def self.all_customers()
     sql = "SELECT * FROM customers"
     customers = SqlRunner.run(sql)
     result = customers.map { |customer| Customer.new(customer) }
@@ -39,7 +39,7 @@ attr_accessor :id, :name, :phone, :address
     SqlRunner.run(sql, values)
   end
 
-  def delete()
+  def delete_customer()
     sql = "DELETE FROM customers WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
