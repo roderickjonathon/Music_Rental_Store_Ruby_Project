@@ -17,11 +17,11 @@ end
 
 get '/rentals/new' do
   @rental = Rental.new(params)
-  @stockitem = Stock.new(params)
   @rentals = Rental.all_rentals
   @customer = Customer.all_customers()
   @customers = Customer.new(params)
   @stock = Stock.all_stock()
+  @stockitem = Stock.new(params)
 
   erb( :"rentals/new" )
 end

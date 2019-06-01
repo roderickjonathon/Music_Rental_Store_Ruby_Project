@@ -4,19 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
   <title>Jonny's Noise</title>
 </head>
 <body>
-  <nav>
-    <li><a href="/">Home Page</a></li>
-    <li><a href="/customers">Current Customers</a></li>
-    <li><a href="/customers/new">New Customer</a></li>
-    <li><a href="/stock">Current Stock</a></li>
-    <li><a href="/stock/new">Add New Stock</a></li>
-    <li><a href="/rentals">Current Rentals</a></li>
-    <li><a href="/rentals/new">New Rental</a></li>
+  <div class="dropdown">
+    <button class="dropbtn">Home</button>
+    <div class="dropdown-content">
+      <ul><a href="/">Main Page</a></ul>
 
-  </nav>
-<%= yield %>
+      </div>
+      </div>
+  <div class="dropdown">
+    <button class="dropbtn"> Customers </button>
+    <div class="dropdown-content">
+      <ul><a href="/customers">Current Customers</a></ul>
+      <ul><a href="/customers/new">New Customer</a></ul>
+      </div>
+      </div>
+      <div class="dropdown">
+      <button class="dropbtn"> Stock </button>
+      <div class="dropdown-content">
+        <ul><a href="/stock">Current Stock</a></ul>
+        <ul><a href="/stock/new">Add New Stock</a></ul>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn"> Rentals </button>
+        <div class="dropdown-content">
+      <ul><a href="/rentals">Current Rentals</a></ul>
+      <ul><a href="/rentals/new">New Rental</a></ul>
+    </div>
+    </div>
+
+  </div>
+
+  <%= yield %>
+
+
 </body>
 </html>

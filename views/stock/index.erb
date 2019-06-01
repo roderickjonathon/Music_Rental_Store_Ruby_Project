@@ -1,3 +1,8 @@
+<div class="container">
+
+
+
+
 <h1>Stock info goes here!</h1>
 
 
@@ -6,6 +11,7 @@
 </form>
 
 <% for stock in @stock %>
+<div class="box">
 <p>ID: <%=stock.id%></p>
 <p>Item: <%=stock.item_name%> </p>
 <p>Category: <%=stock.item_category%></p>
@@ -19,6 +25,8 @@
 <form action="/stock/<%= stock.id %>/update" method="get">
   <input class="btn" type="submit" value="update" />
 </form>
-<hr />
+</div>
 
 <% end %>
+
+</div>
