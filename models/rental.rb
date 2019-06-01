@@ -2,6 +2,7 @@ require('pg')
 require_relative('../db/sql_runner.rb')
 require_relative('./stock.rb')
 require_relative('./customer.rb')
+require('pry')
 
 
 
@@ -60,6 +61,16 @@ class Rental
     values = [@rental_name, @rental_items, @price, @rental_date, @customer_id, @stock_id, @id]
     SqlRunner.run(sql, values)
   end
+
+
+
+  def reference_gen()
+    num = rand 500000
+    return "REN#{num}"
+  end
+
+  # binding.pry
+  # nil
 
 
 

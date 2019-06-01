@@ -9,11 +9,15 @@ also_reload('../models/*')
 
 get '/rentals' do
   @rentals = Rental.all_rentals()
+  @customer = Customer.all_customers()
+  @stock = Stock.all_stock()
   erb(:"rentals/index")
 end
 
 get '/rentals/new' do
   @rentals = Rental.all_rentals
+  @customer = Customer.all_customers()
+  @stock = Stock.all_stock()
   erb( :"rentals/new" )
 end
 
