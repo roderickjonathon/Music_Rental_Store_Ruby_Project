@@ -1,10 +1,18 @@
 <h1>Stock info goes here!</h1>
+
+
+<form action="/stock/new" method="get">
+  <input class="btn" type="submit" value="Add New Stock" />
+</form>
+
 <% for stock in @stock %>
 <p>ID: <%=stock.id%></p>
 <p>Item: <%=stock.item_name%> </p>
 <p>Category: <%=stock.item_category%></p>
 <p>Price: <%=stock.price%></p>
 <p>Quantity: <%=stock.quantity%></p>
+
+
 <form action="/stock/<%= stock.id %>/delete" method="POST">
   <input class="btn" type="submit" value="delete" />
 </form>

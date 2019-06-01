@@ -12,8 +12,8 @@ CREATE TABLE customers
 CREATE TABLE stocklist
 (
   id SERIAL8 PRIMARY KEY,
-  item_name VARCHAR(255) not null,
-  item_category VARCHAR(255) not null,
+  item_name VARCHAR(255),
+  item_category VARCHAR(255),
   price INT4,
   quantity INT4
 

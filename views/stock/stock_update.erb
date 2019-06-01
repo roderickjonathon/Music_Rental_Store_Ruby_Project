@@ -1,0 +1,16 @@
+<form method="post" action="/stock/<%=@stock.id%>/update">
+<label for="item">Item:</label>
+<input id="item" type="text" name="item_name" value="<%= @stock.item_name %>"/>
+
+<label for="category">Category:</label>
+<input id="category" type="text" name="item_category" value="<%= @stock.item_category %>" />
+
+<label for="price">Price:</label>
+<input type="text" id="price" name="price" value="<%= @stock.price %>" />
+
+<label for="quantity">Quantity:</label>
+<input type="text" id="quantity" name="quantity" value="<%= @stock.quantity %>" />
+
+<input class = "btn" type="submit" value="Update Stock Item" />
+
+</form>

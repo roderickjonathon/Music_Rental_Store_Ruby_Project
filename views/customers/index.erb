@@ -1,4 +1,8 @@
 <h1>Customer info goes here!</h1>
+
+<form action="/customers/new" method="get">
+  <input class="btn" type="submit" value="Add New Customer" />
+</form>
 <% for customer in @customers %>
 <p>ID: <%=customer.id%></p>
 <p>Name: <%=customer.name%> </p>

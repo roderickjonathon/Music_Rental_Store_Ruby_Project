@@ -1,3 +1,9 @@
+<h1>All Rental Information</h1>
+
+<form action="/rentals/new" method="get">
+  <input class="btn" type="submit" value="Add New Rental" />
+</form>
+
 <% for rental in @rentals %>
 <p>ID: <%=rental.id%></p>
 <p>Rental Name: <%=rental.rental_name%> </p>
@@ -6,5 +12,5 @@
 <p>Rental Date: <%= rental.rental_date %></p>
 <p>Customer ID: <%=rental.customer_id %></p>
 <p>Stock ID: <%= rental.stock_id%></p>
-
+<hr/>
 <% end %>

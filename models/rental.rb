@@ -28,6 +28,12 @@ class Rental
     @id = rental['id'].to_i
   end
 
+  def delete_rental()
+    sql = "DELETE FROM rentals WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all_rentals()
     sql = "SELECT * FROM rentals"
     rentals = SqlRunner.run(sql)
@@ -41,6 +47,14 @@ class Rental
     SqlRunner.run(sql)
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM rentals WHERE id = $1"
+    values = [id]
+    rental = SqlRunner.run( sql, values )
+    result = Rental.new( rental.first )
+    return result
+  end
+
   def update_rental()
     sql = "UPDATE rentals SET (rental_name, rental_items, price, rental_date, customer_id, stock_id) = ($1, $2, $3, $4, $5, $6) WHERE id =$6"
     values = [@rental_name, @rental_items, @price, @rental_date, @customer_id, @stock_id, @id]
@@ -48,7 +62,7 @@ class Rental
   end
 
 
-## THIS FUNCTION SHOULD CHECK IF STOCK IS THERE, REDUCE STOCK ITEM COUNT, THEN ADD THE ITEM TO RENTALS TABLE
+
 
 
 
