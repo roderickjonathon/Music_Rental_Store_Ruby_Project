@@ -70,6 +70,13 @@ class Rental
   end
 
 
+  def get_stock_name()
+    name = Stock.name
+
+    
+
+
+
   # binding.pry
   # nil
 
