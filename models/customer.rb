@@ -1,4 +1,5 @@
 require('pg')
+require('pry')
 require_relative('../db/sql_runner.rb')
 
 class Customer
@@ -55,6 +56,8 @@ attr_accessor :id, :name, :phone, :address
     result = stock_items.map { |stock| Stock.new(stock) }
     return result
   end
+
+
 
   def self.find( id )
     sql = "SELECT * FROM customers WHERE id = $1"

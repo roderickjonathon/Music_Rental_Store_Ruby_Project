@@ -25,7 +25,7 @@ CREATE TABLE rentals
   rental_reference VARCHAR(255),
   rental_items VARCHAR(255),
   rental_price INT4,
-  rental_date VARCHAR(255),
+  rental_date DATE,
   customer_id INT4 references customers(id) ON DELETE CASCADE,
   stock_id INT4 references stocklist(id) ON DELETE CASCADE
 );

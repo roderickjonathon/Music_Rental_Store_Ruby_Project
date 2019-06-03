@@ -16,10 +16,10 @@
   </select>
 
   <label for="price">Price:</label>
-  <input id="price" type="text" name="price" value=<%= @rental.rental_price %>>
+  <input id="price" type="text" name="rental_price">
 
   <label for="rental_date">Date Rented:</label>
-  <input id="rental_date" type="text" name="rental_date" />
+  <input id="rental_date" type="date" name="rental_date" />
 
   <label for="customer_id">Customer:</label>
     <select name="customer_id" id="customer_id">
@@ -28,10 +28,7 @@
       <% end %>
     </select>
 
- <label for="stock_id">Stock Reference:</label>
-    <input id="stock_id" type="text" name="stock_id" value=<%= @rental.stock_id %>>
-
-
+ 
   <input class="SubmitButton" type="submit" value="Add Rental">
 
 </form>

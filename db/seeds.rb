@@ -53,7 +53,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
             "rental_reference" => "REN25677",
             "rental_items" => stock_item1.item_name,
             "rental_price" => stock_item1.price,
-            "rental_date" => "21/3/19",
+            "rental_date" => "2019-01-21",
             "customer_id" => customer1.id,
             "stock_id" => stock_item1.id
             })
@@ -64,7 +64,7 @@ dj_equipment_set_price = [stock_item2.price, stock_item3.price]
               "rental_reference" => "REN13455",
               "rental_items" => stock_item2.item_name,
               "rental_price" => stock_item2.price,
-              "rental_date" => "02/03/19",
+              "rental_date" => "2019-02-11",
               "customer_id" => customer2.id,
               "stock_id" => stock_item2.id
               })

@@ -8,6 +8,8 @@ also_reload('../models/*')
 
 get '/customers' do
   @customers = Customer.all_customers
+  @customer = Customer.new(params)
+
   erb( :"customers/index" )
 end
 
@@ -16,9 +18,9 @@ get '/customers/new' do
   erb( :"customers/new" )
 end
 
-get "/customers/:id/" do
-  @customer = Customer.find(params[:id])
-  erb(:"customers/index")
+get "/customers/:id/show" do
+  @customer = Customer.find(params[:id].to_i)
+  erb(:"customers/show")
 end
 
 get "/customers/:id/update" do

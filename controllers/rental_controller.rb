@@ -11,6 +11,7 @@ get '/rentals' do
   @rental = Rental.new(params)
   @rentals = Rental.all_rentals()
   @customers = Customer.all_customers()
+  @customer = Customer.new(params)
   @stock = Stock.all_stock()
   erb(:"rentals/index")
 end
@@ -26,9 +27,9 @@ get '/rentals/new' do
   erb( :"rentals/new" )
 end
 
-get "/rentals/:id/" do
-  @rental = Rental.find(params[:id])
-  erb(:"rentals/index")
+get "/rentals/:id/show" do
+  @rental = Rental.find(params[:id].to_i)
+  erb(:"rentals/show")
 end
 
 get "/rentals/:id/update" do

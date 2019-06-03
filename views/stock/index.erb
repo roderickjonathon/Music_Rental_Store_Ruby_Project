@@ -5,10 +5,6 @@
 
 
 
-<!-- <form action="/stock/new" method="get">
-  <input class="btn" type="submit" value="Add New Stock" />
-</form> -->
-
 <% for stock in @stock %>
 <div class="box">
 <p>ID: <%=stock.id%></p>
@@ -16,6 +12,7 @@
 <p>Category: <%=stock.item_category%></p>
 <p>Price: <%=stock.price%></p>
 <p>Quantity: <%=stock.quantity%></p>
+
 
 
 

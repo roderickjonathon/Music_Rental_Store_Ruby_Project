@@ -1,0 +1,23 @@
+
+<div class="container">
+
+
+
+<div class="box">
+<p>Reference No.: <%=@rental.rental_reference%></p>
+<p>Items: <%= @rental.rental_items%> </p>
+<p>Price: <%= @rental.rental_price%></p>
+<p>Date Rented: <%= @rental.rental_date%></p>
+<p>Rented by Customer No.: <%= @rental.customer_id %></p>
+
+
+<form action="/customers/<%= @rental.id %>/delete" method="POST">
+  <input class="btn" type="submit" value="Delete" />
+</form>
+<form action="/customers/<%= @rental.id %>/update" method="get">
+  <input class="btn" type="submit" value="Update" />
+</form>
+
+</div>
+
+</div>
