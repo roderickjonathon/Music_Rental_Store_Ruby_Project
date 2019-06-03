@@ -61,8 +61,23 @@ post '/rentals/' do
 end
 
 
+
 post '/rentals/:id/delete' do
-  @rental = Rental.find(params[:id])
+  @rental = Rental.new(params)
   @rental.delete_rental()
+
+  redirect to ("/rentals")
+end
+
+
+
+get '/rentals/:id/return' do
+  @rental = Rental.find(params[:id])
+
+  @stock = Stock.find(@rental.stock_id)
+  @stock.quantity += 1
+  @stock.update_stock_item()
+  @rental.delete_rental
+
   redirect to ("/rentals")
 end
