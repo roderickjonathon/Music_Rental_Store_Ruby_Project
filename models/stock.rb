@@ -13,7 +13,7 @@ class Stock
     @item_name = options['item_name']
     @item_category = options['item_category']
     @price = options['price']
-    @quantity = options['quantity']
+    @quantity = options['quantity'].to_i
 
   end
 
@@ -84,10 +84,10 @@ class Stock
     end
 
   end
-
-  # def rent_out(item)
-  #   if item.is_available == true
-  #     item.quantity - 1
+  #
+  # def self.rent_out
+  #   if is_available == true
+  #     self.quantity -= 1
   #   end
   # end
 

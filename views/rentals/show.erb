@@ -11,10 +11,10 @@
 <p>Rented by Customer No.: <%= @rental.customer_id %></p>
 
 
-<form action="/customers/<%= @rental.id %>/delete" method="POST">
+<form action="/rentals/<%= @rental.id %>/delete" method="POST">
   <input class="btn" type="submit" value="Delete" />
 </form>
-<form action="/customers/<%= @rental.id %>/update" method="get">
+<form action="/rentals/<%= @rental.id %>/update" method="get">
   <input class="btn" type="submit" value="Update" />
 </form>
 

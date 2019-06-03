@@ -16,9 +16,9 @@ get '/stock/new' do
   erb(:"stock/new")
 end
 
-get "/stock/:id/" do
+get "/stock/:id/show" do
   @stock = Stock.find(params[:id])
-  erb (:"stock/index")
+  erb (:"stock/show")
 end
 
 get "/stock/:id/update" do

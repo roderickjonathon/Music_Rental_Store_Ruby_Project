@@ -23,6 +23,7 @@ get '/rentals/new' do
   @customers = Customer.new(params)
   @stock = Stock.all_stock()
   @stockitem = Stock.new(params)
+  # binding.pry
 
   erb( :"rentals/new" )
 end
@@ -39,7 +40,7 @@ get "/rentals/:id/update" do
   erb(:"rentals/rental_update")
 end
 
-post "/rentals/:id/update" do
+post "/rentals/show/:id/update" do
   @customer = Customer.all
   @rental = Rental.new(params)
   @rental.update_rental()
@@ -49,10 +50,16 @@ end
 
 
 post '/rentals/' do
-  rental = Rental.new(params)
-  rental.save_rental
+  @rental = Rental.new(params)
+  @rental.save_rental
+
+  @stock = Stock.find(params['stock_id'])
+
+  @stock.quantity -= 1
+  @stock.update_stock_item
   redirect to ("/rentals")
 end
+
 
 post '/rentals/:id/delete' do
   @rental = Rental.find(params[:id])

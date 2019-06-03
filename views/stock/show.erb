@@ -1,0 +1,23 @@
+
+<div class="container">
+
+
+
+<div class="box">
+  <p>Item ID: <%=@stock.id%></p>
+  <p>Item Name: <%=@stock.item_name%> </p>
+  <p>Category: <%=@stock.item_category%></p>
+  <p>Price: <%=@stock.price%></p>
+  <p>Quantity: <%=@stock.quantity%></p>
+
+
+  <form action="/stock/<%= @stock.id %>/delete" method="POST">
+    <input class="btn" type="submit" value="Delete" />
+  </form>
+  <form action="/stock/<%= @stock.id %>/update" method="get">
+    <input class="btn" type="submit" value="Update" />
+  </form>
+
+</div>
+
+</div>

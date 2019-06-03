@@ -4,12 +4,12 @@
 <% for rental in @rentals %>
 <div class="box">
 
-<p>ID: <%=rental.id%></p>
+
 <p>Reference: <%=rental.rental_reference%> </p>
-<p>Rental Items: <%=rental.rental_items%></p>
+<p>Item No: <%=rental.rental_items%></p>
 <p>Price: <%=rental.rental_price%></p>
 <p>Rental Date: <%= rental.rental_date %></p>
-<p>Customer: <%= rental.customer_id %></p>
+<p>Customer No.: <%= rental.customer_id %></p>
 
 <form action="/rentals/<%=rental.id%>/show" method="get">
   <input class="btn" type="submit" value="View Rental" />
