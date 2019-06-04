@@ -2,6 +2,7 @@ require('pg')
 require_relative('../db/sql_runner.rb')
 require_relative('./stock.rb')
 require_relative('./customer.rb')
+
 require('pry')
 
 
@@ -60,6 +61,20 @@ class Rental
     sql = "UPDATE rentals SET (rental_reference, rental_items, rental_price, rental_date, customer_id, stock_id) = ($1, $2, $3, $4, $5, $6) WHERE id =$6"
     values = [@rental_reference, @rental_items, @rental_price, @rental_date, @customer_id, @stock_id, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def customer
+    sql = "SELECT * FROM customers WHERE id = $1"
+    values = [@customer_id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |customer| Customer.new(customer)  }
+  end
+
+  def stock
+    sql = "SELECT *FROM stocklist WHERE id = $1"
+    values = [@stock_id]
+    results = SqlRunner.run(sql, values)
+    return results.map { |stock| Stock.new(stock)}
   end
 
 

@@ -84,12 +84,7 @@ class Stock
     end
 
   end
-  #
-  # def self.rent_out
-  #   if is_available == true
-  #     self.quantity -= 1
-  #   end
-  # end
+
 
 
 
