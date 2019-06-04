@@ -55,11 +55,13 @@ input[type=text] {
   padding: 12px 20px;
   margin: 30px 0;
   box-sizing: border-box;
-  font-size: 100%;
-  opacity: 0.6;
+  font-size: 90%;
+  opacity: 0.9;
   border: 3px solid #1be;
   border-radius: 25px;
   display: flex;
+  background-color: #1be0;
+  color: white;
 
 }
 
@@ -94,10 +96,10 @@ input[type=text] {
   font-size: 120%;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
   text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .box2 {
@@ -115,10 +117,10 @@ input[type=text] {
   font-size: 120%;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
   text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .box3 {
@@ -151,10 +153,10 @@ input[type=text] {
   color: white;
   margin: 25px;
   text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .SubmitButton:hover {
@@ -185,10 +187,44 @@ label {
 
   color: white;
   text-shadow:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+#formstyle2 {
+  margin-left: 10vw;
+  display: grid;
+  grid-template-columns: 20% auto;
+
+
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+#rental_date {
+  font-size: 100%;
+  width: 35vw;
+  background-color: #1be0;
+  font-size: 100%;
+  font: inherit;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border: solid 3px;
+  border-color:	#1be;
+  border-radius: 10px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+
 }
 
 .custom-select {
@@ -196,15 +232,71 @@ label {
   color: #1be;
 }
 
-.rental-items select {
-  width: 200px;
+/* .rental-items select {
+width: 5vw;
+} */
+
+#customer_id {
+  width: 35vw;
+  background-color: #1be0;
+  border: solid 3px;
+  border-color:	#1be;
+  font-size: 95%;
+  font: inherit;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border-radius: 25px;
+  padding-top: 5vh;
+  margin-top: 2vh;
 }
 
+#rental_items {
+  width: 35vw;
+  background-color: #1be0;
+  font-size: 100%;
+  font: inherit;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border: solid 3px;
+  border-color:	#1be;
+  border-radius: 50px;
+}
+
+#reference {
+  margin-top: 2vh;
+}
+
+#rental_reference {
+  width: 35vw;
+  padding-top: 1vh;
+  background-color: #1be0;
+  font-size: 100%;
+  font: inherit;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border: solid 3px;
+  border-color:	#1be;
+  border-radius: 10px;
+  margin-top: 2vh;
+}
 
 .navbar {
   overflow: hidden;
   background-color: #333;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+
 }
 
 .navbar a {
