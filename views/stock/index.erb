@@ -8,11 +8,12 @@
   <% for stock in @stock %>
   <div class="box2">
 
-    <p>Item: <%=stock.item_name%> </p>
-    <p>ID: #<%=stock.id%></p>
-    <p>Category: <%=stock.item_category%></p>
-    <p>Price: £<%=stock.price%></p>
-    <p>Quantity: <%=stock.quantity%></p>
+    <p id="p2">Item: </p> <p> <%=stock.item_name%> </p>
+
+    <p id="p2">ID: </p><p> #<%=stock.id%></p>
+    <p id="p2">Category: </p><p> <%=stock.item_category%></p>
+    <p id="p2">Price: </p><p> £<%=stock.price%></p>
+    <p id="p2">Quantity: </p><p> <%=stock.quantity%></p>
     <% if stock.quantity < 2 %>
     <h3> Stock currently low! </h3>
 
