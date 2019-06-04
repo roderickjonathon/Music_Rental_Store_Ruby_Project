@@ -19,8 +19,8 @@ ul {
 }
 
 h1 {
-  align: center;
-  padding: 10px;
+  display: flex;
+  align-items: center;
   font: white;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
 }
@@ -71,22 +71,6 @@ input[type=text] {
 
 }
 
-.box {
-  display: flex;
-  flex-flow: column wrap;
-  /* flex: 1; */
-  border: solid 15px;
-  border-color: #1be;
-  border-radius: 15px;
-  height: 25vh;
-  width: 25vw;
-  margin: 80px;
-  padding: 20px;
-  font: white;
-  font-size: 120%;
-  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
-}
-
 .SubmitButton
 {
   border-top:		2px solid #a3ceda;
@@ -118,6 +102,45 @@ label {
   padding: 40px;
 
 }
+// Entypo
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font: 1em 'entypo', sans-serif;
+}
+
+// Styles
+
+body {
+    background: #fafafa00;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1be;
+}
+
+
+
+.select {
+    -webkit-appearance: none;
+    background-color: #eee0;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    font-size: 75%;
+    line-height: 1em;
+    padding: 1em 1em;
+    width: 75%;
+
+}
+
+.select-icon {
+    position: absolute;
+    top: .8em;
+    right: 1em;
+}
+
+
 
 .custom-select {
   position: relative;
@@ -134,9 +157,23 @@ label {
 
 }
 
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  /* flex: 1; */
+  border: solid 15px;
+  border-color: #1be;
+  border-radius: 15px;
+  height: 25vh;
+  width: 25vw;
+  margin: 80px;
+  padding: 20px;
+  font: white;
+  font-size: 120%;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+}
 
-
-/* .box2 {
+.box2 {
   display: flex;
   flex-flow: column wrap;
   border: solid 15px;
@@ -149,7 +186,7 @@ label {
   font: white;
   font-size: 120%;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
-} */
+}
 
 .navbar {
   overflow: hidden;
@@ -172,8 +209,6 @@ label {
 .dropdown {
   float: left;
   overflow: hidden;
-  margin-top: 10vh;
-  margin-left: 5vw;
 }
 
 .dropdown .dropbtn {

@@ -1,3 +1,7 @@
+<div class="heading">
+<h1>Equipment Rentals</h1>
+</div>
+
 <div class="container">
 
 
@@ -5,18 +9,17 @@
 <div class="box">
 
 
-<p>Reference: <%=rental.rental_reference%> </p>
-<p>Item No: <a href="/stock/<%= rental.stock_id %>/show"> <%=rental.stock_id%></a> </p>
-<p>Price: <%=rental.rental_price%></p>
-<p>Rental Date: <%= rental.rental_date %></p>
-<p>Customer No.: <a href="/customers/<%= rental.customer_id %>/show"> <%=rental.customer_id%></a> </p>
+  <p>Reference No.: <%=rental.rental_reference%></p>
+  <p>Item No: <a href="/stock/<%= rental.stock_id %>/show">#<%=rental.stock_id%></a> </p>
+  <p>Date Rented: <%= rental.rental_date%></p>
+  <p>Rented by Customer No: <a href="/customers/<%= rental.customer_id %>/show"> #<%= rental.customer_id %> <%=@customer.name%></a></p>
 
 <form action="/rentals/<%=rental.id%>/show" method="get">
-  <input class="btn" type="submit" value="View Rental" />
+  <input class="btn" type="submit" value="View Full Details" />
 </form>
 
 <form action="/rentals/<%=rental.id%>/return" method=get">
-  <input class="btn" type="submit" name="" value="Check Item In">
+  <input class="btn" type="submit" name="" value="Check Item Back To Stock">
 </form>
 
 

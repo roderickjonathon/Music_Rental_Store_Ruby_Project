@@ -7,8 +7,9 @@
 
 <% for stock in @stock %>
 <div class="box">
-<p>ID: <%=stock.id%></p>
+
 <p>Item: <%=stock.item_name%> </p>
+<p>ID: #<%=stock.id%></p>
 <p>Category: <%=stock.item_category%></p>
 <p>Price: <%=stock.price%></p>
 <p>Quantity: <%=stock.quantity%></p>

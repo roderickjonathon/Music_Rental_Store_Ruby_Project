@@ -12,7 +12,8 @@ get '/rentals' do
   @rentals = Rental.all_rentals()
   @customers = Customer.all_customers()
   @customer = Customer.new(params)
-  @stock = Stock.all_stock()
+
+
   erb(:"rentals/index")
 end
 
@@ -30,6 +31,8 @@ end
 
 get "/rentals/:id/show" do
   @rental = Rental.find(params[:id].to_i)
+  @stock = Stock.find(@rental.stock_id)
+  @customer = Customer.find(@rental.customer_id)
   erb(:"rentals/show")
 end
 
@@ -47,10 +50,19 @@ post "/rentals/show/:id/update" do
   redirect to ("/rentals")
 end
 
+get '/rentals/not_available' do
+  erb (:"rentals/not_available")
+end
 
 
 post '/rentals/' do
   @rental = Rental.new(params)
+  @stock = Stock.find(params['stock_id'])
+  @rental.rental_price = @stock.price
+  @rental.rental_items = @stock.item_name
+  if @stock.quantity < 1
+    redirect to ("rentals/not_available")
+  end
   @rental.save_rental
 
   @stock = Stock.find(params['stock_id'])
