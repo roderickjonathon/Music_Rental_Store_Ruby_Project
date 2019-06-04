@@ -152,6 +152,7 @@ input[type=text] {
   font-weight:		bold;
   color: white;
   margin: 25px;
+  margin-top: 5vh;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
@@ -194,7 +195,8 @@ label {
 }
 
 #formstyle2 {
-  margin-left: 10vw;
+  margin-left: 20vw;
+  margin-top: 15vh;
   display: grid;
   grid-template-columns: 20% auto;
 
@@ -296,6 +298,7 @@ width: 5vw;
   overflow: hidden;
   background-color: #333;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+  margin-bottom: 5vh;
 
 }
 
