@@ -5,25 +5,26 @@
 <div class="container">
 
 
-<% for rental in @rentals %>
-<div class="box">
+  <% for rental in @rentals %>
+  <div class="box3">
 
 
-  <p>Reference No: <%=rental.rental_reference%></p>
-  <p>Item No: <a href="/stock/<%= rental.stock_id %>/show">#<%=rental.stock_id%></a> </p>
-  <p>Date Rented: <%= rental.rental_date%></p>
-  <p>Rented by Customer No: <a href="/customers/<%= rental.customer_id %>/show"> #<%= rental.customer_id %> <%=@customer.name%></a></p>
+    <p id="p2">Reference No:</p><p> <%=rental.rental_reference%></p>
+    <p id="p2">Item No:</p><p> <a href="/stock/<%= rental.stock_id %>/show">#<%=rental.stock_id%></a> </p>
+    <p id="p2">Date Rented:</p><p> <%= rental.rental_date%></p>
+    <p id="p2">Rented by Customer No:</p><p> <a href="/customers/<%= rental.customer_id %>/show"> #<%= rental.customer_id %> <%=@customer.name%></a></p>
 
-<form action="/rentals/<%=rental.id%>/show" method="get">
-  <input class="btn" type="submit" value="View Full Details" />
-</form>
+    <div class="rental_button">
+      <form action="/rentals/<%=rental.id%>/show" method="get">
+        <input id="btn2" type="submit" value="View Full Details" />
+      </form>
+      <pre>
+      <form action="/rentals/<%=rental.id%>/return" method=get">
+        <input id="btn2" type="submit" name="" value="Check Item Back To Stock">
+      </form>
+    </div>
 
-<form action="/rentals/<%=rental.id%>/return" method=get">
-  <input class="btn" type="submit" name="" value="Check Item Back To Stock">
-</form>
+  </div>
 
-
-</div>
-
-<% end %>
+  <% end %>
 </div>

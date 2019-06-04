@@ -11,14 +11,14 @@
     <p>Price: <%=@stock.price%></p>
     <p>Quantity: <%=@stock.quantity%></p>
 
+    <pre>
+      <form action="/stock/<%= @stock.id %>/delete" method="POST">
+        <input class="btn" type="submit" value="Delete" />
+      </form>
+      <form action="/stock/<%= @stock.id %>/update" method="get">
+        <input class="btn" type="submit" value="Update" />
+      </form>
 
-    <form action="/stock/<%= @stock.id %>/delete" method="POST">
-      <input class="btn" type="submit" value="Delete" />
-    </form>
-    <form action="/stock/<%= @stock.id %>/update" method="get">
-      <input class="btn" type="submit" value="Update" />
-    </form>
-
+    </div>
+    <img src="/images/djmixer.png" alt="DJ Mixer">
   </div>
-<img src="/images/djmixer.png" alt="DJ Mixer">
-</div>

@@ -46,7 +46,7 @@ h3 {
 }
 
 a, a:link, a:visited {
-  color: #1be;
+  color: #8be;
   text-decoration: none;
 }
 
@@ -86,6 +86,10 @@ input[type=text] {
 
 }
 
+.rental_buttn {
+  padding: 20px;
+  margin: 20px;
+}
 
 .btn {
   border-top:		5px solid #1be;
@@ -93,13 +97,30 @@ input[type=text] {
   border-right:		5px solid #1be;
   border-bottom:		5px solid #1be;
   border-radius: 25px;
-  padding:		1px 8px !important;
+  padding:		3px 8px !important;
   font-size:		80%; !important;
   background-color:	#1be0;
   font-weight:		bold;
   color: white;
   margin: 25px;
   margin-left: 10px;
+
+}
+#btn2 {
+  border-top:		5px solid #1be;
+  border-left:		5px solid #1be;
+  border-right:		5px solid #1be;
+  border-bottom:		5px solid #1be;
+  border-radius: 25px;
+  padding:		5px 8px !important;
+  font-size:		60%; !important;
+  background-color:	#1be0;
+  font-weight:		bold;
+  color: white;
+  margin: 10px;
+
+  /* margin: 25px;
+  margin-left: 10px; */
 
 }
 
@@ -111,7 +132,7 @@ input[type=text] {
   border-color: #1be;
   border-radius: 15px;
   height: 25vh;
-  width: 25vw;
+  width: 30vw;
   margin: 80px;
   padding: 20px;
   font: white;
@@ -154,12 +175,17 @@ input[type=text] {
   border-color:	#1be;
   border-radius: 15px;
   height: 25vh;
-  width: 25vw;
+  width: 30vw;
   margin: 80px;
   padding: 20px;
   font: white;
-  font-size: 120%;
+  font-size: 100%;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }
 
 .SubmitButton
@@ -170,7 +196,8 @@ input[type=text] {
   border-bottom:		2px solid #4f6267;
   border-radius: 25px;
   padding:		10px 20px !important;
-  font-size:		100%; !important;
+  padding-left: 5px;
+  font-size:		90%; !important;
   background-color:	inherit;
   font-weight:		bold;
   color: white;
