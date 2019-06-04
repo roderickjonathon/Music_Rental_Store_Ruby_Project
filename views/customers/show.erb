@@ -19,10 +19,17 @@
     </form>
 
   </div>
+  <%if @customer.stock_rented != [] %>
+
   <div class="box">
     <h2> Currently Renting: </h2>
-    <h3> <pre> </h3>
-    <p id="p2"><%@customer.stock_rented.each do |item| %></p><p id="p2"><%=item.item_name%></p>
+    <!-- <h3> <pre> </h3> -->
+
+    <p id="p2"><%@customer.stock_rented.each do |item| %> </p><p id="p2"><a href="/stock/<%=@customer.stock_rented[0].id%>/show"><%=item.item_name%></a> </p>
+
+
     <%end%>
   </div>
+  <%end%>
+
 </div>
