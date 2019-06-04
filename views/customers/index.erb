@@ -4,8 +4,8 @@
 <% for customer in @customers %>
 <div class="box">
 
-<p id="p2">Name: <%= customer.name%> </p>
-<p id="p2">Phone: <%= customer.phone%></p>
+<p id="p2">Name:</p><p> <%= customer.name%> </p>
+<p id="p2">Phone:</p><p> <%= customer.phone%></p>
 
 
 <form action="/customers/<%= customer.id %>/show" method="get">

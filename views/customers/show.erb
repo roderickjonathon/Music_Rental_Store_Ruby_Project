@@ -5,10 +5,10 @@
 
   <div class="box">
 
-    <p id="p2">Name: <%= @customer.name%> </p>
-    <p id="p2">ID: <%=@customer.id%></p>
-    <p id="p2">Phone: <%= @customer.phone%></p>
-    <p id="p2">Address: <%= @customer.address%></p>
+    <p id="p2">Name:</p><p> <%= @customer.name%> </p>
+    <p id="p2">ID:</p><p> <%=@customer.id%></p>
+    <p id="p2">Phone:</p><p> <%= @customer.phone%></p>
+    <p id="p2">Address:</p><p class="p3"> <%= @customer.address%></p>
 
 
     <form action="/customers/<%= @customer.id %>/delete" method="POST">

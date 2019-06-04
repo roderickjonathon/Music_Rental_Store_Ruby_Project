@@ -1,34 +1,31 @@
-<div class="container2">
-
-
-
+<div class="container">
 
 
   <form  id="formstyle2" action="/rentals/" method="post">
 
 
-  <label id="reference" for="rental_reference">Reference:</label>
-  <input name="rental_reference" type="text" id="rental_reference" value=<%= @rental.reference_gen%>>
+    <label id="reference" for="rental_reference">Reference:</label>
+    <input name="rental_reference" type="text" id="rental_reference" value=<%= @rental.reference_gen%>>
 
-  <label for="rental_items">Item Rented:</label>
-  <div class="custom-select">
-  <select class="select" name="stock_id" id="rental_items">
-    <% @stock.each do |stock| %>
+    <label for="rental_items">Item Rented:</label>
+    <div class="custom-select">
+      <select class="select" name="stock_id" id="rental_items">
+        <% @stock.each do |stock| %>
         <option value=<%= stock.id %>><%= stock.item_name %></option>
-    <% end %>
-  </select>
-  </div>
+        <% end %>
+      </select>
+    </div>
 
-  <!-- <label for="price">Price:</label>
-  <input id="price" type="text" name="rental_price"> -->
+    <!-- <label for="price">Price:</label>
+    <input id="price" type="text" name="rental_price"> -->
 
-  <label for="rental_date">Date Rented:</label>
-  <input id="rental_date" type="date" name="rental_date" />
+    <label for="rental_date">Date Rented:</label>
+    <input id="rental_date" type="date" name="rental_date" />
 
-  <label for="customer_id">Customer:</label>
+    <label for="customer_id">Customer:</label>
     <select name="customer_id" id="customer_id">
       <% @customer.each do |customer| %>
-          <option value=<%= customer.id %>><%= customer.name %></option>
+      <option value=<%= customer.id %>><%= customer.name %></option>
       <% end %>
     </select>
 
@@ -38,9 +35,9 @@
 
 
 
-  <input class="SubmitButton" type="submit" value="Add Rental">
+    <input class="SubmitButton" type="submit" value="Add Rental">
 
-</form>
+  </form>
 
 
 </div>

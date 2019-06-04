@@ -11,6 +11,15 @@ body {
 
 }
 
+p {
+  font-size: 130%;
+  color: white;
+}
+
+#p2 {
+  color: #1be;
+}
+
 
 ul {
   margin: 0 10px;
@@ -29,6 +38,7 @@ h1 {
 
 h2 {
   align: center;
+  /* justify-content: flex-end; */
 }
 
 h3 {
@@ -56,6 +66,10 @@ form {
   font-size: 140%;
 }
 
+pre {
+  font-size: 140%;
+}
+
 
 input[type=text] {
   width: 80%;
@@ -80,11 +94,12 @@ input[type=text] {
   border-bottom:		5px solid #1be;
   border-radius: 25px;
   padding:		1px 8px !important;
-  font-size:		75%; !important;
+  font-size:		80%; !important;
   background-color:	#1be0;
   font-weight:		bold;
   color: white;
   margin: 25px;
+  margin-left: 10px;
 
 }
 
@@ -112,6 +127,7 @@ input[type=text] {
 .box2 {
   display: flex;
   flex-flow: column wrap;
+
   /* flex: 1; */
   border: solid 10px;
   border-color:	#1be;
@@ -203,8 +219,8 @@ label {
 }
 
 #formstyle2 {
-  margin-left: 20vw;
-  margin-top: 15vh;
+  margin-left: 5vw;
+  margin-top: 5vh;
   display: grid;
   grid-template-columns: 20% auto;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);

@@ -14,16 +14,21 @@
     <p id="p2">Category: </p><p> <%=stock.item_category%></p>
     <p id="p2">Price: </p><p> £<%=stock.price%></p>
     <p id="p2">Quantity: </p><p> <%=stock.quantity%></p>
-    <% if stock.quantity < 2 %>
-    <h3> Stock currently low! </h3>
 
+    <% if stock.quantity == 0 %>
+    <h3> Item unavailable! </h3>
+    <% elsif stock.quantity < 2 %>
+    <h3> Stock running low! </h3>
     <%end%>
 
 
-    <form action="/stock/<%=stock.id%>/show" method="get">
-      <input class="btn" type="submit" value="View Item" />
-    </form>
+    <div class="button-place">
 
+
+      <form action="/stock/<%=stock.id%>/show" method="get">
+        <input class="btn" type="submit" value="View Item" />
+      </form>
+    </div>
 
   </div>
 
