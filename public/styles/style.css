@@ -14,6 +14,8 @@ body {
 p {
   font-size: 130%;
   color: white;
+  padding-bottom: 8px;
+  padding-top: 1px;
 }
 
 #p2 {
@@ -30,6 +32,7 @@ ul {
 h1 {
   align: center;
   padding: 10px;
+  margin-top: 70px;
   font: white;
   font-size: 300%;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
@@ -182,8 +185,8 @@ input[type=text] {
   border-color:	#1be;
   border-radius: 15px;
   height: 40vh;
-  width: 30vw;
-  margin: 80px;
+  width: 35vw;
+  margin: 40px;
   padding: 20px;
   font: white;
   font-size: 100%;
