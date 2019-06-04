@@ -8,6 +8,8 @@ also_reload('../models/*')
 
 get '/stock' do
   @stock = Stock.all_stock
+  
+  @stockitem = Stock.new(params)
   erb(:"stock/index")
 end
 

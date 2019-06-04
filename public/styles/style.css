@@ -23,6 +23,12 @@ h1 {
   padding: 10px;
   font: white;
   box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+  border: solid;
+  border-radius: 25px;
+}
+
+h3 {
+  color: red;
 }
 
 a, a:link, a:visited {
@@ -75,8 +81,50 @@ input[type=text] {
   display: flex;
   flex-flow: column wrap;
   /* flex: 1; */
-  border: solid 15px;
+  border: solid 10px;
   border-color: #1be;
+  border-radius: 15px;
+  height: 25vh;
+  width: 25vw;
+  margin: 80px;
+  padding: 20px;
+  font: white;
+  font-size: 120%;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.box2 {
+  display: flex;
+  flex-flow: column wrap;
+  /* flex: 1; */
+  border: solid 10px;
+  border-color:	#1be;
+  border-radius: 15px;
+  height: 25vh;
+  width: 25vw;
+  margin: 80px;
+  padding: 20px;
+  font: white;
+  font-size: 120%;
+  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.box3 {
+  display: flex;
+  flex-flow: column wrap;
+  /* flex: 1; */
+  border: solid 10px;
+  border-color:	#1be;
   border-radius: 15px;
   height: 25vh;
   width: 25vw;
@@ -100,6 +148,11 @@ input[type=text] {
   font-weight:		bold;
   color: white;
   margin: 25px;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 label {
@@ -128,28 +181,6 @@ label {
   width: 200px;
 }
 
-
-
-
-
-}
-
-
-
-/* .box2 {
-  display: flex;
-  flex-flow: column wrap;
-  border: solid 15px;
-  border-color: #1be;
-  border-radius: 15px;
-  height: 50vh;
-  width: 50vw;
-  margin: 60px;
-  padding: 10px;
-  font: white;
-  font-size: 120%;
-  box-shadow: 0px 18px 25px 0px rgba(0,0,0,0.4);
-} */
 
 .navbar {
   overflow: hidden;
