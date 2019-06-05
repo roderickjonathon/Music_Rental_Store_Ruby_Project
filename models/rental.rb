@@ -6,8 +6,6 @@ require_relative('./customer.rb')
 require('pry')
 
 
-
-
 class Rental
 
   attr_accessor :id, :rental_reference, :rental_items, :rental_price, :rental_date, :customer_id, :stock_id
@@ -63,6 +61,7 @@ class Rental
     SqlRunner.run(sql, values)
   end
 
+   ## Here I want this function to return the details of the customer from this rental.
   def customer
     sql = "SELECT * FROM customers WHERE id = $1"
     values = [@customer_id]
@@ -70,15 +69,18 @@ class Rental
     return results.map { |customer| Customer.new(customer)  }
   end
 
+   ## This method should return the details of what stock is being rented.
+
   def stock
-    sql = "SELECT *FROM stocklist WHERE id = $1"
+    sql = "SELECT * FROM stocklist WHERE id = $1"
     values = [@stock_id]
     results = SqlRunner.run(sql, values)
     return results.map { |stock| Stock.new(stock)}
   end
 
 
-
+    ## This function should randomly generate a number between 1-500000 and
+    ## interpolate it with the string REN so it can be used as a serial number generator.
   def reference_gen()
     num = rand 500000
     return "REN#{num}"
