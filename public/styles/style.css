@@ -58,8 +58,12 @@ justify-content: center;
 }
 
 a, a:link, a:visited {
-  color: white;
+  color: violet;
   text-decoration: none;
+}
+
+#a2 {
+  color: #1be;
 }
 
 form {
@@ -116,6 +120,11 @@ input[type=text] {
   color: white;
   margin: 25px;
   margin-left: 10px;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 
 }
 #btn2 {
@@ -130,6 +139,11 @@ input[type=text] {
   font-weight:		bold;
   color: white;
   margin: 10px;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 
   /* margin: 25px;
   margin-left: 10px; */
@@ -186,7 +200,7 @@ input[type=text] {
   border: solid 10px;
   border-color:	#1be;
   border-radius: 15px;
-  height: 40vh;
+  height: 35vh;
   width: 35vw;
   margin: 40px;
   padding: 20px;
@@ -261,6 +275,11 @@ label {
   color: white;
   font-weight: bold;
   padding: 40px;
+  text-shadow:
+  /* -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; */
 
 }
 
